@@ -41,3 +41,32 @@ class LibraryManagementSystem:
                 print(f"Title: {book['title']}, Author: {book['author']}, Year: {book['year']}")
         else:
             print("No book found with that title.")
+if __name__ == "__main__":
+    library = LibraryManagementSystem()
+    while True:
+        print("\nLibrary Management System")
+        print("1. Add Book")
+        print("2. Remove Book")
+        print("3. Display Books")
+        print("4. Search Book")
+        print("5. Exit")
+
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            title = input("Enter book title: ")
+            author = input("Enter book author: ")
+            year = input("Enter book year: ")
+            library.add_book(title, author, year)
+        elif choice == "2":
+            title = input("Enter book title to remove: ")
+            library.remove_book(title)
+        elif choice == "3":
+            library.display_books()
+        elif choice == "4":
+            title = input("Enter book title to search: ")
+            library.search_book(title)
+        elif choice == "5":
+            print("Exiting Library Management System. Goodbye!")
+            break
+        else:
+            print("Invalid choice! Please try again.")
