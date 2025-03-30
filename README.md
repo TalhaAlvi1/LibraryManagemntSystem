@@ -11,7 +11,7 @@ A simple **Library Management System** in Python that allows users to manage boo
 - Stores book records in a JSON file.
 
 ## Requirements
-- Python 3.x
+- Python 3
 - JSON module (built-in)
 
 ## Usage
